@@ -1,0 +1,526 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+html, body{
+    height: 100%;
+    width: 100%;
+}
+
+.sidebar{
+    background-color: #fff;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: none;
+    height: 100vh;
+    width: 270px;
+    z-index: 999;
+    box-shadow: 10px 0 10px rgba(0,0,0,0.1);
+}
+
+.search-bar{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 15px;
+    border: 1px solid #fff;
+    width:40%;
+}
+.search-bar i{
+    position: absolute;
+    left: 35px;
+    font-size: 18px;
+    top: 22px;
+    color: #cccccc;
+    font: bolder;
+}
+
+.page1-part2{
+    display: flex;
+    background:linear-gradient(to right,rgba(0,0,0,0.8) 20%,rgba(0,0,0,0.1)),url("https://plus.unsplash.com/premium_photo-1666497934028-607274a840a8?q=80&w=1975&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D") ;
+    background-size: cover;
+    background-position: center;
+}
+
+.detail-images {
+    height: 50%;
+    width: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.detail-images i{
+   font-size: 10vh;
+   color: #fff;
+
+}
+
+.detail-images h1{   
+ color: #fff;
+ 
+ text-align:center;
+}
+
+.wrapper{
+    padding: 10px;
+}
+
+#card-area{
+    padding: 50px 0;
+}
+
+.box-area{
+    
+    display:flex;
+    grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
+    grid-gap:40px;
+    margin-top: 50px;
+     
+}
+.box-area::-webkit-scrollbar{
+    display: none;
+}
+.box{
+    height: 300px;
+    min-width: 20vw;
+    background-color: red;
+    border-radius:10px;
+    position:relative;
+    overflow:hidden;
+    box-shadow: 5px 5px 15px rgba(0,0,0,0.5);
+
+}
+
+.box img{
+    width: 100%;
+    border-radius: 10px;
+    display: block;
+    transition: transform 0.5s;
+}
+
+.overlay{
+    height:60%;
+    width:100%;
+    background:linear-gradient(transparent,#1c1c1c 58%);
+    border-radius:10px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 0 40px;
+    text-align:center;
+    font-size:14px;
+    transition: height 0.5s;
+}
+.overlay h3{
+    font-weight:500;
+    color:#fff;
+    margin-bottom:5px;
+    margin-top:80%;
+    
+    font-size:30px;
+    letter-spacing: 2px;
+}
+.overlay p{
+    color:#fff;
+    margin-bottom:5px;
+    font-size:2vh;
+    
+}
+
+.overlay a{
+    margin-top: 5px;
+    color:#262626;
+    text-decoration: none;
+    font-size:14px;
+    background: yellow ;
+    border-radius: 50px;
+    text-align:center;
+    padding: 5px 15px;
+}
+
+
+.box:hover img{
+    transform:scale(1.2) ;
+}
+
+.box:hover .overlay{
+    height: 100%;
+}
+
+@media(min-width:1030px){
+    .hideOnMobile{
+        display:none
+    }
+    #page2{
+        margin-bottom: 10px;
+    }
+   
+}
+@media(max-width:850px){
+    
+    .create button{
+        display: none;
+    }
+    nav{
+        position: relative;
+        display: flex;
+        justify-content: space-between;
+    }
+    #sidenav {
+        position: absolute;
+        left: 10%;
+        font-size: x-large;
+    }
+    #logo-main{
+        position:absolute;
+    }
+    #smallsearch{
+       position: absolute;
+       right: 10%;
+       font-size: x-large;
+    }
+    
+    .search-bar{
+        position: relative;
+        display: none !important;
+        align-items: center;
+        justify-content: center;
+        padding: 10px 15px;
+        border: 1px solid #fff;
+        width:40%;
+    }
+    .search-bar i{
+        position: absolute;
+        left: 35px;
+        font-size: 18px;
+        top: 22px;
+        color: #cccccc;
+        font: bolder;
+    }
+    .page1-part2{
+        display: flex;
+        background:url("https://plus.unsplash.com/premium_photo-1666497934028-607274a840a8?q=80&w=1975&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D") ;
+        background-size: cover;
+        background-position: center;
+    }
+
+    .detail-info {
+        width: 100%;
+        position: relative;
+    }
+    .detail-info h1{
+        text-align: center;
+        margin-top: 10vw;
+        font-size: 4vh;
+        
+    }
+     
+    .detail-info h2{
+        text-align: center;
+        width: 100%;
+        font-size: large;
+    }
+    .detail-info button{
+        position: absolute;
+        left: 43%;
+    }
+    .page1-part2 .container{
+        display: none;
+    }
+    .detail-info .detail-images{
+        margin-top: 10vh;
+        margin-left: 3vw;
+    }
+
+    .detail-images h1{
+        font-size: 2vh;
+        text-align: center;
+        margin-bottom: 5vh;
+        margin-top: 0;
+    }
+    .heading h1{
+        font-size: 6vh;
+        margin-top: 10vh;
+        line-height: 10vh;
+    }
+
+    .box-area{
+        display: grid;
+    }
+    .box-area :nth-last-child(5){
+        display: none;
+    }
+    
+    .overlay{
+        height:100%;
+        width:100%;
+        background:linear-gradient(transparent,#1c1c1c6f 58%);
+        border-radius:10px;
+        position: absolute;
+        overflow: hidden;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        padding: 0 40px;
+        text-align:center;
+        font-size:14px;
+        
+    }
+    .overlay h3{
+        font-weight:500;
+        color:#fff;
+        margin-bottom:5px;
+        margin-top:50%;
+        
+        font-size:40px;
+        letter-spacing: 2px;
+    }
+    .overlay p{
+        color:#fff;
+        margin-bottom:7px;
+        font-size:2vh;
+        
+    }
+    
+    .overlay a{
+        margin-top: 5px;
+        color:#262626;
+        text-decoration: none;
+        font-size:14px;
+        background: yellow ;
+        border-radius: 50px;
+        text-align:center;
+        padding: 5px 15px;
+        display: none !important;
+    }
+    .box{
+        height: 300px;
+        min-width: 20vw;
+       
+        border-radius:10px;
+        position:relative;
+        overflow:hidden;
+        box-shadow: 5px 5px 15px rgba(0,0,0,0.5);
+    }
+
+    body{
+        overflow-x: hidden;
+    }
+    
+}
+
+@media (max-width: 648px) {
+    .box-area{
+        display: flex;
+        flex-direction: column;
+    }
+    .box-area :nth-last-child(5){
+        display: none;
+    }
+    
+    .box{
+        
+       
+        border-radius:10px;
+        position:relative;
+        overflow:hidden;
+        box-shadow: 5px 5px 15px rgba(0,0,0,0.5);
+    }
+    .overlay{
+        height:100%;
+        width:100%;
+        background:linear-gradient(transparent,#1c1c1c6f 58%);
+        border-radius:10px;
+        position: absolute;
+        overflow: hidden;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        padding: 0 40px;
+        text-align:center;
+        font-size:14px;
+        
+    }
+    .overlay h3{
+        font-weight:500;
+        color:#fff;
+        margin-bottom:5px;
+        margin-top:50%;
+        
+        font-size:40px;
+        letter-spacing: 2px;
+    }
+    .overlay p{
+        color:#fff;
+        margin-bottom:7px;
+        font-size:2vh;
+        
+    }
+    
+    .overlay a{
+        margin-top: 5px;
+        color:#262626;
+        text-decoration: none;
+        font-size:14px;
+        background: yellow ;
+        border-radius: 50px;
+        text-align:center;
+        padding: 5px 15px;
+        display: none !important;
+    }
+    .box{
+        height: 320px;
+        min-width: 20vw;
+       
+        border-radius:10px;
+        position:relative;
+        overflow:hidden;
+        box-shadow: 5px 5px 15px rgba(0,0,0,0.5);
+    }
+
+    #page3{
+        display: none !important;
+    }
+    #footer{
+        margin-top: 160vh;
+        display: flex;
+        flex-direction: column;
+        height: 50vh;
+    }
+
+    #div1{
+        width: 100%;
+        margin-top: 1vw;
+    }
+    #div1 #logo{
+        display: none;
+    }
+
+    #div1 p{
+        width: full;
+        
+    }
+    
+    #seconddiv{
+        display: none;
+    }
+
+    body{
+        overflow-x: hidden;
+    }
+    
+}
+@media (max-width:430px) {
+    .box-area{
+        display: flex;
+        flex-direction: column;
+    }
+    .box-area :nth-last-child(5){
+        display: none;
+    }
+    
+    .box{
+        
+       
+        border-radius:10px;
+        position:relative;
+        overflow:hidden;
+        box-shadow: 5px 5px 15px rgba(0,0,0,0.5);
+    }
+    .overlay{
+        height:100%;
+        width:100%;
+        background:linear-gradient(transparent,#1c1c1c6f 58%);
+        border-radius:10px;
+        position: absolute;
+        overflow: hidden;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        padding: 0 40px;
+        text-align:center;
+        font-size:14px;
+        
+    }
+    .overlay h3{
+        font-weight:500;
+        color:#fff;
+        margin-bottom:5px;
+        margin-top:50%;
+        
+        font-size:40px;
+        letter-spacing: 2px;
+    }
+    .overlay p{
+        color:#fff;
+        margin-bottom:7px;
+        font-size:2vh;
+        
+    }
+    
+    .overlay a{
+        margin-top: 5px;
+        color:#262626;
+        text-decoration: none;
+        font-size:14px;
+        background: yellow ;
+        border-radius: 50px;
+        text-align:center;
+        padding: 5px 15px;
+        display: none !important;
+    }
+    .box{
+        height: 350px;
+        min-width: 20vw;
+       
+        border-radius:10px;
+        position:relative;
+        overflow:hidden;
+        box-shadow: 5px 5px 15px rgba(0,0,0,0.5);
+    }
+
+    #page3{
+        display: none !important;
+    }
+    #footer{
+        margin-top: 160vh;
+        display: flex;
+        flex-direction: column;
+        height: 50vh;
+    }
+
+    #div1{
+        width: 100%;
+        margin-top: 1vw;
+    }
+    #div1 #logo{
+        display: none;
+    }
+
+    #div1 p{
+        width: full;
+        
+    }
+    
+    #seconddiv{
+        display: none;
+    }
+
+    body{
+        overflow-x: hidden;
+    }
+}
+
+
+
+
